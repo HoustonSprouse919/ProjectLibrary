@@ -4,7 +4,7 @@ function book(title, author, pages, read){
     this.author = author
     this.page = pages
     this.readStatus = read
-    
+    addBookToLibrary(this)
 }
 book.prototype.info = function(){
     return(this.title+" by "+this.author+", "+this.page +" pages, "+this.readStatus+" read");
@@ -29,17 +29,12 @@ function addNew(){
     var newAuthor = prompt("please input author name");
     var newPages = prompt("please input number of page");
     var newReadStatus = prompt("please input if you have or haven't read");
-    var bookNum = "book"+myLibrary.length
-    bookNum = new book(newTitle, newAuthor, newPages, newReadStatus,bookNum);
-    addBookToLibrary(bookNum)
+    new book(newTitle, newAuthor, newPages, newReadStatus);
 }
 
-const book1= new book("houston's book", "Houston", "55", "has not");
-const book2= new book("Chainsaw man", "Fujimoto", "Alot", "has");
+new book("houston's book", "Houston", "55", "has not");
+new book("Chainsaw man", "Fujimoto", "Alot", "has");
 
 
-book1.info()
-addBookToLibrary(book1)
-addBookToLibrary(book2)
 console.log(myLibrary)
 displayBooks();
