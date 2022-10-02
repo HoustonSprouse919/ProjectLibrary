@@ -24,7 +24,15 @@ content.textContent= myLibrary[i].info()
 container.appendChild(content);
     }
 }
-
+function addNew(){
+    var newTitle = prompt("please input title");
+    var newAuthor = prompt("please input author name");
+    var newPages = prompt("please input number of page");
+    var newReadStatus = prompt("please input if you have or haven't read");
+    var bookNum = "book"+myLibrary.length
+    bookNum = new book(newTitle, newAuthor, newPages, newReadStatus,bookNum);
+    addBookToLibrary(bookNum)
+}
 
 const book1= new book("houston's book", "Houston", "55", "has not");
 const book2= new book("Chainsaw man", "Fujimoto", "Alot", "has");
