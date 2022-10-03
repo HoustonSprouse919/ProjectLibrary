@@ -8,9 +8,35 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <input type="button" value="Add New" onclick="addNew()" />
-    <div id="container"><p></p></div>
-    <div class="books-grid" id="booksGrid"></div>
+    <input type="button" value="Add New" onclick="openForm()" />
+    <div id="container"></div>
+
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+          <h1>Add new book</h1>
+      
+          <label for="title"><b>Book Title</b></label>
+          <input type="text" placeholder="Enter book title" name="title" required>
+      
+          <label for="author"><b>Book Author</b></label>
+          <input type="text" placeholder="Enter book author" name="author" required>
+
+          <label for="pages"><b>Amount of pages</b></label>
+          <input type="text" placeholder="Enter amount of pages" name="pages" required>
+      
+          <p>Have you read this book</p>
+          <input type="radio" id="yes" name="readStatus" value="has">
+          <label for="html">yes</label><br>
+
+          <input type="radio" id="no" name="readStatus" value="has not">
+          <label for="html">no</label><br>
+          
+
+          <button type="button" class="btn" onclick="addNew(title.value,author.value,pages.value,readStatus.value)">Add this book</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
 </body>
 <script src="javascript.js"></script>
 

@@ -48,14 +48,18 @@ content.appendChild(button);
 content.appendChild(button2);
     }
 }
-function addNew(){ //ask user for info on new book
-    let newTitle = prompt("please input title");
-    let newAuthor = prompt("please input author name");
-    let newPages = prompt("please input number of page");
-    let newReadStatus = prompt("please input if you have or haven't read");
-    new book(newTitle, newAuthor, newPages, newReadStatus);
+function addNew(title, author, pages, readStatus){ //ask user for info on new book
+    new book(title, author, pages, readStatus);
     displayBooks();
 }
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
 
 new book("houston's book", "Houston", "55", "has not");
 new book("Chainsaw man", "Fujimoto", "Alot", "has");
