@@ -22,7 +22,11 @@ for(var i = 0; i< myLibrary.length; i++){ //run amount times //goes into contain
 const content = document.createElement('div');  //creates divs called content
 content.classList.add('content')
 content.textContent= myLibrary[i].info()
+var button = document.createElement("BUTTON");
+var text = document.createTextNode("Change read Status");
+button.appendChild(text);
 container.appendChild(content);
+content.appendChild(button);
     }
 }
 function addNew(){
