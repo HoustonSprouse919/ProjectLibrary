@@ -25,6 +25,10 @@ content.textContent= myLibrary[i].info() //adds book info
 let button = document.createElement("BUTTON"); //creates button
 let text = document.createTextNode("Change read Status"); //adds text to buttons
 button.appendChild(text);
+let button2 = document.createElement("BUTTON"); //creates button
+let text2 = document.createTextNode("Remove this book"); //adds text to buttons
+button2.appendChild(text2);
+button2.setAttribute("id", i);
 button.setAttribute("id", i); //supposed to be id for each button but its the same for all of them
 console.log(button.id)
 button.addEventListener("click", function(){
@@ -35,8 +39,14 @@ button.addEventListener("click", function(){
      }
      displayBooks();
   });
+
+  button2.addEventListener("click", function(){
+    myLibrary.splice(button.id,1)
+    displayBooks();
+ });
 container.appendChild(content);
 content.appendChild(button);
+content.appendChild(button2);
     }
 }
 function addNew(){
