@@ -16,8 +16,8 @@
         <form class="form-container">
           <h1>Add new book</h1>
       
-          <label for="title"><b>Book Title</b></label>
-          <input type="text" placeholder="Enter book title" name="title" required>
+          <label for="bookTitle"><b>Book Title</b></label>
+          <input type="text" placeholder="Enter book title" name="bookTitle" required>
       
           <label for="author"><b>Book Author</b></label>
           <input type="text" placeholder="Enter book author" name="author" required>
@@ -33,7 +33,7 @@
           <label for="html">no</label><br>
           
 
-          <button type="button" class="btn" onclick="addNew(title.value,author.value,pages.value,readStatus.value)">Add this book</button>
+          <button type="button" class="btn" onclick="addNew(bookTitle.value, author.value ,pages.value ,readStatus.value)">Add this book</button>
           <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
         </form>
       </div>
